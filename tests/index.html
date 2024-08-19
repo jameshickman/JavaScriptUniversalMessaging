@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydration Module Test Page</title>
+    <style>
+        .test-component {
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        #bottom-component {
+            margin-top: 2000px; /* Push this component below the fold */
+        }
+    </style>
+</head>
+<body>
+    <h1>JSUM (JavaScript Universal Messaging) with Hydration Test Page</h1>
+    
+    <hydration-aware-component id="top-component" class="test-component" jsum>
+        Top Component (Initially Visible)
+    </hydration-aware-component>
+
+    <event-send-test></event-send-test>
+
+    <hydration-aware-component id="middle-component" class="test-component test-set" jsum>
+        Middle Component (Initially Visible)
+    </hydration-aware-component>
+
+    <hydration-aware-component id="bottom-component" class="test-component test-set" jsum>
+        Bottom Component (Initially Not Visible)
+    </hydration-aware-component>
+    <script type="Module">
+        import { init_hydration_lifecycle } from "../lib/jsum.js";
+        import { HydrationAwareComponent } from "./test-1.js";
+        import { EventSenderComponent } from "./test-send.js";
+        init_hydration_lifecycle();
+    </script>
+</body>
