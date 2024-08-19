@@ -19,7 +19,12 @@
 <body>
     <h1>JSUM (JavaScript Universal Messaging) with Hydration Test Page</h1>
 
-    <event-send-test jsum="true"></event-send-test>
+    <event-send-test jsum="true">
+        <button data-selector="#top-component" data-value="1">Send to First</button>
+        <button data-selector="#middle-component" data-value="2">Send to Second</button>
+        <button data-selector="#bottom-component" data-value="3">Send to Third</button>
+        <button data-selector=".test-set" data-value="321">Send to Second and Third</button>
+    </event-send-test>
     
     <hydration-aware-component id="top-component" class="test-component" jsum="true">
         Top Component (Initially Visible)
