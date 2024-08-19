@@ -23,7 +23,7 @@
         Top Component (Initially Visible)
     </hydration-aware-component>
 
-    <event-send-test></event-send-test>
+    <event-send-test jsom></event-send-test>
 
     <hydration-aware-component id="middle-component" class="test-component test-set" jsum>
         Middle Component (Initially Visible)
@@ -33,9 +33,19 @@
         Bottom Component (Initially Not Visible)
     </hydration-aware-component>
     <script type="Module">
-        import { init_hydration_lifecycle } from "../lib/jsum.js";
+        import { init_hydration_lifecycle, multicall } from "../lib/jsum.js";
         import { HydrationAwareComponent } from "./test-1.js";
         import { EventSenderComponent } from "./test-send.js";
         init_hydration_lifecycle();
+        multicall(
+            {
+                target: "global_config",
+                query: "[jsom]",
+                params: [{
+                    key: "value",
+                    something: 456
+                }]
+            }
+        );
     </script>
 </body>

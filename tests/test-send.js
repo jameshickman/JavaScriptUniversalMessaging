@@ -29,6 +29,11 @@ class EventSenderComponent extends HTMLElement {
             });
         });
     }
+
+    global_config(config) {
+        console.log(`${this.id || 'Anonymous component'} recieved global configuration object`);
+        console.log(config);
+    }
 }
 
 customElements.define("event-send-test", EventSenderComponent);
