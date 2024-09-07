@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSUM navigation with Persistance test</title>
+    </head>
+    <body>
+        <navigation-menu id="main-navigation" data-target="#main-views">
+            <button data-view="view1">First</button>
+            <button data-view="view2">Second</button>
+            <button data-view="view3">Third</button>
+        </navigation-menu>
+        <navigation-views id="main-views">
+            <div data-name="view1">
+                <h1>First view</h1>
+            </div>
+            <div data-name="view2">
+                <h1>Second view</h1>
+            </div>
+            <div data-name="view3">
+                <h1>Third view</h1>
+            </div>
+        </navigation-views>
+    </body>
+    <script type="module">
+        import {init} from "../lib/persistance.js";
+        import {NavigationView} from "../lib/navigation.js";
+        import {NavigationMenu} from "../lib/menu.js";
+
+        document.addEventListener('DOMContentLoaded', (e) => {
+            init();
+        });
+    </script>
+</html>
