@@ -27,7 +27,7 @@ class EventSenderComponent extends HTMLElement {
         });
     }
 
-    global_config(config) {
+    async global_config(config) {
         console.log(`${this.id || 'Anonymous component'} recieved global configuration object`);
         console.log(config);
     }

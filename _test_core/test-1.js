@@ -23,7 +23,7 @@ class HydrationAwareComponent extends HTMLElement {
       console.log(`${this.id || 'Anonymous component'} connected to the DOM`);
     }
   
-    _start() {
+    async _start() {
       if (this._hydrated) {
         console.log(`${this.id || 'Anonymous component'} is already hydrated`);
         return;
@@ -40,7 +40,7 @@ class HydrationAwareComponent extends HTMLElement {
     }
   
     // Method that can be called by multicall
-    testMethod(param) {
+    async testMethod(param) {
       console.log(`Test method called on ${this.id || 'Anonymous component'} with param: ${param}`);
       return `${this.id || 'Anonymous component'}: ${param}`;
     }
