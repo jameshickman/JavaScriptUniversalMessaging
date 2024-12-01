@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test of the REST API services module</title>
+    </head>
+    <body>
+
+    </body>
+    <script type="module">
+        import {API_REST, HTTP_GET} from "./lib/API.js";
+
+        const api = new API_REST();
+        api.define_endpoint(
+            "slow_response",
+            (resp) => {
+                const d = resp.json();
+                console.log("First Handler:");
+                console.log(d);
+            }
+        ).define_endpoint(
+            "slow_response",
+            (resp) => {
+                const d = resp.json();
+                console.log("Second Handler:");
+                console.log(d);
+            }
+        );
+
+        console.log("First call to back-end");
+        console.log(api.call("slow_response"));
+        console.log("Second call to back-end");
+        console.log(api.call("slow_response"));
+    </script>
+</html>
