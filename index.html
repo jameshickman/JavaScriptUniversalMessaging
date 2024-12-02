@@ -4,31 +4,29 @@
         <title>Test of the REST API services module</title>
     </head>
     <body>
-
-    </body>
+        <h1>Test script</h1>
     <script type="module">
         import {API_REST, HTTP_GET} from "./lib/API.js";
 
-        const api = new API_REST();
+        window.api = new API_REST();
         api.define_endpoint(
             "slow_response",
-            (resp) => {
-                const d = resp.json();
+            (d) => {
                 console.log("First Handler:");
                 console.log(d);
             }
         ).define_endpoint(
             "slow_response",
-            (resp) => {
-                const d = resp.json();
+            (d) => {
                 console.log("Second Handler:");
                 console.log(d);
             }
         );
 
         console.log("First call to back-end");
-        console.log(api.call("slow_response"));
+        console.log(api.call("slow_response", HTTP_GET));
         console.log("Second call to back-end");
-        console.log(api.call("slow_response"));
+        console.log(api.call("slow_response", HTTP_GET));
     </script>
+    </body>
 </html>

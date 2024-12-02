@@ -10,9 +10,11 @@ const sleep = (ms) => {
 
 app.use(express.static('.'));
 
-app.get("/slow_response", (req, res) => {
-    sleep(3000);
+app.get("/slow_response", async (req, res) => {
+    console.log("Slow response started.");
+    await sleep(5000);
     res.setHeader('Content-Type', 'application/json');
+    console.log("Returning data.")
     res.end(JSON.stringify(
         {
             "message": "A slow processing end-point"
