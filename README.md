@@ -11,6 +11,7 @@ A lightweight, zero-dependency JavaScript library for building component-based w
 - **State Persistence**: URL hash-based state storage for bookmarking and sharing
 - **REST API Interface**: Simple API client with endpoint definition and mocking
 - **TypeScript Support**: Full TypeScript implementation available
+- **Framework Agnostic**: Works standalone or as a complement to other libraries
 
 ## Installation
 
@@ -124,6 +125,19 @@ This watches for changes to TypeScript files and recompiles them automatically.
 ```
 
 For more details, see the [TypeScript README](./ts/README.md).
+
+## Integration with Other Frameworks
+
+JSUM can complement existing front-end libraries and frameworks:
+
+- **Cross-Framework Communication**: Use `multicall()` as a universal message bus between different framework components
+- **Micro-Frontend Architecture**: Bridge communication between React, Vue, or Angular islands
+- **Performance Enhancement**: Add visibility-based lazy loading to components in any framework
+- **State Persistence**: Lightweight alternative to complex state management libraries
+- **Incremental Migration**: Facilitate gradual transitions between frameworks with a common messaging layer
+- **Server-Side Rendering**: Enhance SSR frameworks with on-demand component hydration
+
+The zero-dependency nature and Web Components foundation make JSUM particularly valuable for applications using multiple frameworks or transitioning between technologies.
 
 ## License
 
