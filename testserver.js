@@ -1,25 +1,14 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 3000;
 
-const sleep = (ms) => {
-    return new Promise((resolve) => {
-        setTimeout(resolve, ms);
-    });
-}
+// Serve static files from project root
+app.use(express.static(path.join(__dirname)));
 
-app.use(express.static('.'));
-
-app.get("/slow_response", async (req, res) => {
-    console.log("Slow response started.");
-    await sleep(5000);
-    res.setHeader('Content-Type', 'application/json');
-    console.log("Returning data.")
-    res.end(JSON.stringify(
-        {
-            "message": "A slow processing end-point"
-        }
-    ));
+app.listen(port, () => {
+  console.log(`Test server running at http://localhost:${port}`);
+  console.log(`Test pages available at:`);
+  console.log(`  - http://localhost:${port}/_test_core/index.html`);
+  console.log(`  - http://localhost:${port}/_test_navigation/index.html`);
 });
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
