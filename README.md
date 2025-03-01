@@ -1,2 +1,91 @@
-# JavaScriptUniversalMessaging
-JavaScript Universal Messaging
+# JavaScriptUniversalMessaging (JSUM)
+
+A lightweight, zero-dependency JavaScript library for building component-based web applications with efficient communication, navigation, and state persistence.
+
+## Features
+
+- **Component-Based Architecture**: Uses Web Components (Custom Elements) for reusable UI
+- **Lazy Hydration**: Visibility-driven component initialization for improved performance
+- **Universal Messaging**: `multicall()` function for communication between components
+- **Navigation System**: View switching with state persistence and history support
+- **State Persistence**: URL hash-based state storage for bookmarking and sharing
+- **REST API Interface**: Simple API client with endpoint definition and mocking
+
+## Installation
+
+```bash
+# Coming soon to npm
+```
+
+## Quick Start
+
+```html
+<script type="module">
+    import { multicall } from './lib/jsum.js';
+    
+    // Define a custom element
+    customElements.define('my-component', class extends HTMLElement {
+        connectedCallback() {
+            this.setAttribute('jsum', '');  // Enable lazy hydration
+        }
+        
+        sayHello() {
+            console.log('Hello from my component!');
+            return 'Hello!';
+        }
+    });
+    
+    // Call methods on all matching components
+    multicall('my-component', 'sayHello');
+</script>
+```
+
+## Documentation
+
+### Core Modules
+
+- **jsum.js**: Core hydration and messaging functionality
+- **navigation.js**: View switching and state management
+- **menu.js**: Navigation menu components
+- **persistance.js**: State persistence using URL hash
+- **API.js**: REST API client with mocking support
+- **object_equals.js**: Deep object comparison utilities
+
+### Running Tests
+
+#### Manual Tests
+1. Start the test server: `npm run test:server`
+2. Open `http://localhost:3000/_test_core/index.html` or `http://localhost:3000/_test_navigation/index.html`
+
+#### Automated Tests
+The project uses Nightwatch.js for automated browser testing:
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the test server in one terminal:
+   ```bash
+   npm run test:server
+   ```
+
+3. Run the tests in another terminal:
+   ```bash
+   npm test
+   ```
+
+Test files are organized in the `tests/` directory:
+- `tests/core/hydration.test.js` - Tests for component hydration functionality
+- `tests/core/multicall.test.js` - Tests for the messaging system
+- `tests/navigation/navigation.test.js` - Tests for navigation components
+
+The automated tests validate:
+- Visibility-based hydration of components
+- Component messaging using multicall
+- Navigation between views
+- URL hash-based state persistence
+
+## License
+
+See [LICENSE](./LICENSE) file for details.
