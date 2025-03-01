@@ -127,4 +127,6 @@ For more details, see the [TypeScript README](./ts/README.md).
 
 ## License
 
-See [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+Copyright (c) 2024 jameshickman
