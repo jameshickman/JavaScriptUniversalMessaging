@@ -10,6 +10,7 @@ A lightweight, zero-dependency JavaScript library for building component-based w
 - **Navigation System**: View switching with state persistence and history support
 - **State Persistence**: URL hash-based state storage for bookmarking and sharing
 - **REST API Interface**: Simple API client with endpoint definition and mocking
+- **TypeScript Support**: Full TypeScript implementation available
 
 ## Installation
 
@@ -42,14 +43,21 @@ A lightweight, zero-dependency JavaScript library for building component-based w
 
 ## Documentation
 
-### Core Modules
-
+### JavaScript Modules (lib/)
 - **jsum.js**: Core hydration and messaging functionality
 - **navigation.js**: View switching and state management
 - **menu.js**: Navigation menu components
 - **persistance.js**: State persistence using URL hash
 - **API.js**: REST API client with mocking support
 - **object_equals.js**: Deep object comparison utilities
+
+### TypeScript Modules (ts/src/)
+- **jsum.ts**: TypeScript implementation of core functionality with type definitions
+- **navigation.ts**: Typed view switching and state management
+- **menu.ts**: Typed navigation menu components
+- **persistance.ts**: Typed state persistence using URL hash
+- **API.ts**: Typed REST API client
+- **object_equals.ts**: Typed deep object comparison utilities
 
 ### Running Tests
 
@@ -85,6 +93,37 @@ The automated tests validate:
 - Component messaging using multicall
 - Navigation between views
 - URL hash-based state persistence
+
+### TypeScript Support
+
+The library includes a full TypeScript implementation in the `ts/` directory.
+
+#### Building TypeScript
+
+```bash
+npm run build:ts
+```
+
+This compiles TypeScript files from `ts/src/` to JavaScript in `ts/dist/`.
+
+#### Development Mode
+
+```bash
+npm run watch:ts
+```
+
+This watches for changes to TypeScript files and recompiles them automatically.
+
+#### Using TypeScript Version
+
+```html
+<script type="module">
+    import { multicall } from './ts/dist/jsum.js';
+    // Use the TypeScript-generated version with type safety
+</script>
+```
+
+For more details, see the [TypeScript README](./ts/README.md).
 
 ## License
 

@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "description": "A lightweight JavaScript library for building component-based web applications",
   "main": "lib/jsum.js",
+  "types": "ts/dist/jsum.d.ts",
   "scripts": {
     "test": "nightwatch",
-    "test:server": "node testserver.js"
+    "test:server": "node testserver.js",
+    "build:ts": "tsc",
+    "watch:ts": "tsc --watch"
   },
   "keywords": [
     "web-components",
@@ -18,6 +21,7 @@
   "devDependencies": {
     "chromedriver": "^133.0.0",
     "express": "^4.18.2",
-    "nightwatch": "^3.4.1"
+    "nightwatch": "^3.4.1",
+    "typescript": "^5.8.2"
   }
 }
