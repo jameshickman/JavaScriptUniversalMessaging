@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="core.multicall.test"
+    errors="1" failures="0" hostname="" id="" package="core" skipped="3"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+       An error occurred while creating a new ChromeDriver session: [SessionNotCreatedError] session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 133.0.6943.142 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+  Verify if ChromeDriver is configured correctly; using:
+  {
+     start_process: true,
+     server_path: &#39;/Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/node_modules/chromedriver/lib/chromedriver/chromedriver&#39;,
+     port: 9515,
+     host: &#39;localhost&#39;,
+     ssl: false,
+     default_path_prefix: &#39;&#39;,
+     proxy: undefined,
+     cli_args: {}
+  }
+
+ 
+  More info might be available in the log file: /Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/logs/core/hydration.test_chromedriver.log
+ An error occurred while creating a new ChromeDriver session: [SessionNotCreatedError] session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 133.0.6943.142 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+  Verify if ChromeDriver is configured correctly; using:
+  {
+     start_process: true,
+     server_path: &#39;/Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/node_modules/chromedriver/lib/chromedriver/chromedriver&#39;,
+     port: 9515,
+     host: &#39;localhost&#39;,
+     ssl: false,
+     default_path_prefix: &#39;&#39;,
+     proxy: undefined,
+     cli_args: {}
+  }
+
+ 
+  More info might be available in the log file: /Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/logs/core/multicall.test_chromedriver.log
+ An error occurred while creating a new ChromeDriver session: [SessionNotCreatedError] session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 133.0.6943.142 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+  Verify if ChromeDriver is configured correctly; using:
+  {
+     start_process: true,
+     server_path: &#39;/Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/node_modules/chromedriver/lib/chromedriver/chromedriver&#39;,
+     port: 9515,
+     host: &#39;localhost&#39;,
+     ssl: false,
+     default_path_prefix: &#39;&#39;,
+     proxy: undefined,
+     cli_args: {}
+  }
+
+ 
+  More info might be available in the log file: /Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/logs/navigation/navigation.test_chromedriver.log
+    </system-err>
+  
+
+    
+    <error message="An error occurred while creating a new ChromeDriver session: [SessionNotCreatedError] session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 133.0.6943.142 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome"><![CDATA[
+      SessionNotCreatedError: An error occurred while creating a new ChromeDriver session: [SessionNotCreatedError] session not created: This version of ChromeDriver only supports Chrome version 123
+Current browser version is 133.0.6943.142 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    at Object.throwDecodedError (/Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/node_modules/selenium-webdriver/lib/error.js:521:15)
+    at parseHttpResponse (/Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/node_modules/selenium-webdriver/lib/http.js:514:13)
+    at Executor.execute (/Users/jameshickman/rationalboxes-source/JavaScriptUniversalMessaging/node_modules/selenium-webdriver/lib/http.js:446:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="should call a method on a single component" classname="core.multicall.test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="should call a method on multiple components with a class selector" classname="core.multicall.test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="should handle async methods properly" classname="core.multicall.test">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

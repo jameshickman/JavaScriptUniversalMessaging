@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="core.hydration.test"
+    errors="0" failures="0" hostname="" id="" package="core" skipped="0"
+    tests="3" time="1.341" timestamp="">
+  
+    <testcase name="should initially hydrate visible components" classname="core.hydration.test" time="0.06900" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="should hydrate bottom component when scrolled into view" classname="core.hydration.test" time="0.5250" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="should send messages to components using multicall" classname="core.hydration.test" time="0.04600" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

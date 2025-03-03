@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="core.multicall.test"
+    errors="0" failures="0" hostname="" id="" package="core" skipped="0"
+    tests="3" time="1.309" timestamp="">
+  
+    <testcase name="should call a method on a single component" classname="core.multicall.test" time="0.1850" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="should call a method on multiple components with a class selector" classname="core.multicall.test" time="0.1950" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="should handle async operations" classname="core.multicall.test" time="0.2430" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

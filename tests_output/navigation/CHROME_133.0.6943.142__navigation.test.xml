@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="4">
+
+  <testsuite name="navigation.navigation.test"
+    errors="0" failures="0" hostname="" id="" package="navigation" skipped="0"
+    tests="4" time="0.5380" timestamp="">
+  
+    <testcase name="should show the first view by default" classname="navigation.navigation.test" time="0.07000" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="should navigate to second view when clicked" classname="navigation.navigation.test" time="0.08000" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="should navigate to third view when clicked" classname="navigation.navigation.test" time="0.04900" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="should persist navigation state in URL hash" classname="navigation.navigation.test" time="0.04000" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
